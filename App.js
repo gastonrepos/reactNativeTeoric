@@ -69,11 +69,12 @@ const OtherContainerBox = ContainerBoxHoc(SpanBox) -->> es otro componente Conta
   render() {
     return this.props.renderBox(this.state);
   }
-}
+  }
 const Box = props => <div>{props.name}</div> -->> componente tipo 1
 
 const ContainerBoxWithBox = (
-<ContainerBox renderBox={state => (<Box {…state} />)} /> -->> en la prop renderBox se pasa una funcion que pinta la info 
+<ContainerBox renderBox={state => (<Box {…state} />)} /> -->> en la prop renderBox se pasa una funcion que pinta la info definida 
+                                                              en el componente padre
 );
 
 https://latteandcode.medium.com/react-4-tipos-de-componentes-para-gobernarlos-a-todos-7c8f5c28e0b0
