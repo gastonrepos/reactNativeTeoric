@@ -29,7 +29,7 @@ const componenteHocBox2 = Hoc(Box2);
 const TypesOfComponents = () => {
     return (
         <View style= { styles.center }> 
-            <Text> describe los distintos tipos de componentes que pueden crearse </Text>
+            <Text style={ styles.text }> describe los distintos tipos de componentes que pueden crearse </Text>
 
             <Box data={'este es un componente sin estado'}/>
 
@@ -43,9 +43,13 @@ const TypesOfComponents = () => {
 
             { RenderProp((data) =>  Box3(data)) }
 
+            {/*
+            Algunos componentes desencadenan eventos / callbacks (devoluciones de llamada) en respuesta a la entrada del usuario. 
+            Para agregar un controlador de eventos, pase una función como props a un elemento React
+            */}
             <Button
                 title='boton'
-                onPress={ () => {} }
+                onPress={ () => {alert('apretaste un boton ¡¡¡')} }
             />
         </View>
     );
@@ -57,7 +61,13 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         textAlign: 'center',
-    }
+    },
+    text: {
+        color: 'rgb(59,108,212)',
+        fontSize: 20,
+        fontWeight: '100',
+        textAlign: 'center',
+    },
 });
 
 export default TypesOfComponents;
