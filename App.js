@@ -21,6 +21,12 @@ const styles = StyleSheet.create({
   },
 });
 
+/**
+Componentes funcional: una función que toma parámetros (llamados props) como entrada y devuelve un elemento React.
+
+Componentes de clase: una clase que extiende de React.Component e implementa un método render()
+*/
+
 /*
 tipos de componentes:
 
