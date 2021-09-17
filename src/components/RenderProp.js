@@ -1,8 +1,6 @@
-import React, { Component, useState } from "react";
+import React, { useState } from "react";
 
-import { Text, View } from "react-native";
-
-import Box from '../components/StatelessComponent';
+import { View } from "react-native";
 
 const RenderProp = (props) => {        
     let [ counter, setCounter ] = useState(256);
