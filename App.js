@@ -1,14 +1,23 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import ConditionalRendering from './src/screens/ConditionalRendering';
+import ContadorFunctional from './src/screens/ContadorFunctional';
 import TypesOfComponents from './src/screens/TypesOfComponents';
 import HookSreen from './src/screens/HookScreen';
+import ListWithKeys from './src/components/ListWithkeys';
+import ContadorClass from './src/screens/ContadorClass';
 
 export default function App() {
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
       <HookSreen/>
+      <ListWithKeys/>
+      <ConditionalRendering/>
+      <ContadorFunctional/>
+      <TypesOfComponents/>
+      <ContadorClass/>
     </View>
   );
 }
@@ -21,6 +30,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+/**
+Componentes funcional: una función que toma parámetros (llamados props) como entrada y devuelve un elemento React.
+
+Componentes de clase: una clase que extiende de React.Component e implementa un método render()
+*/
 
 /*
 tipos de componentes:
@@ -70,11 +85,12 @@ const OtherContainerBox = ContainerBoxHoc(SpanBox) -->> es otro componente Conta
   render() {
     return this.props.renderBox(this.state);
   }
-}
+  }
 const Box = props => <div>{props.name}</div> -->> componente tipo 1
 
 const ContainerBoxWithBox = (
-<ContainerBox renderBox={state => (<Box {…state} />)} /> -->> en la prop renderBox se pasa una funcion que pinta la info 
+<ContainerBox renderBox={state => (<Box {…state} />)} /> -->> en la prop renderBox se pasa una funcion que pinta la info definida 
+                                                              en el componente padre
 );
 
 https://latteandcode.medium.com/react-4-tipos-de-componentes-para-gobernarlos-a-todos-7c8f5c28e0b0
