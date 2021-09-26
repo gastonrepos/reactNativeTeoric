@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import ConditionalRendering from './src/screens/ConditionalRendering';
 import ContadorFunctional from './src/screens/ContadorFunctional';
 import TypesOfComponents from './src/screens/TypesOfComponents';
 import ContadorClass from './src/screens/ContadorClass';
@@ -9,6 +10,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
+      <ConditionalRendering/>
       <ContadorFunctional/>
       <TypesOfComponents/>
       <ContadorClass/>
